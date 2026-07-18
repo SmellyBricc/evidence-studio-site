@@ -49,7 +49,11 @@ export default function App() {
           <div className="hero-media">
             <figure className="campaign-frame">
               <picture className="campaign-picture">
-                <source srcSet="./assets/campaign-still.avif" type="image/avif" />
+                <source
+                  srcSet="./assets/campaign-still-768.avif 768w, ./assets/campaign-still-1200.avif 1200w, ./assets/campaign-still.avif 1536w"
+                  sizes="(max-width: 900px) calc(100vw - 32px), min(62vw, 1536px)"
+                  type="image/avif"
+                />
                 <img
                   className="campaign-image"
                   src="./assets/campaign-still.jpg"

@@ -8,17 +8,40 @@
       name="description"
       content="Evidence Studio connects accessibility findings, screenshots, retests, and client-ready reports in one local-first Chrome workflow."
     />
+    <link rel="canonical" href="https://smellybricc.github.io/evidence-studio-site/" />
     <meta property="og:title" content="Evidence Studio | Accessibility evidence that holds together" />
     <meta
       property="og:description"
       content="Capture context, protect sensitive evidence, and turn retests into client-ready proof."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="./assets/campaign-still.jpg" />
+    <meta property="og:site_name" content="Evidence Studio" />
+    <meta property="og:url" content="https://smellybricc.github.io/evidence-studio-site/" />
+    <meta property="og:image" content="https://smellybricc.github.io/evidence-studio-site/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Evidence Studio campaign page with layered accessibility evidence and the message Make proof impossible to ignore"
+    />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Evidence Studio | Accessibility evidence that holds together" />
+    <meta
+      name="twitter:description"
+      content="Capture context, protect sensitive evidence, and turn retests into client-ready proof."
+    />
+    <meta name="twitter:image" content="https://smellybricc.github.io/evidence-studio-site/og-image.jpg" />
     <title>Evidence Studio | Accessibility evidence that holds together</title>
     <link rel="icon" type="image/png" href="./assets/icon.png" />
-    <link rel="preload" as="image" type="image/avif" href="./assets/campaign-still.avif" fetchpriority="high" />
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      href="./assets/campaign-still-1200.avif"
+      imagesrcset="./assets/campaign-still-768.avif 768w, ./assets/campaign-still-1200.avif 1200w, ./assets/campaign-still.avif 1536w"
+      imagesizes="(max-width: 900px) calc(100vw - 32px), min(62vw, 1536px)"
+      fetchpriority="high"
+    />
     <script>
       (() => {
         try {
@@ -35,6 +58,7 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "Evidence Studio",
+        "url": "https://smellybricc.github.io/evidence-studio-site/",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Chrome",
         "description": "A local-first workspace for organizing accessibility findings, evidence, retests, and reports."

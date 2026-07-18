@@ -1,2 +1,4 @@
 User-agent: *
 Allow: /
+
+Sitemap: https://smellybricc.github.io/evidence-studio-site/sitemap.xml
