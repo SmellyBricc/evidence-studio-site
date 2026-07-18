@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11120f" />
+    <meta name="description" content="Plain-language pre-launch terms for Evidence Studio." />
+    <title>Terms | Evidence Studio</title>
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("evidence-studio-theme");
+          const preferred = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          document.documentElement.dataset.theme = stored || preferred;
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body data-legal="terms">
+    <div id="root"></div>
+    <script type="module" src="/src/legal.tsx"></script>
+  </body>
+</html>

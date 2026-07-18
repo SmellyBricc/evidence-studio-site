@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:,">
+  <title>Checkout accessibility review</title>
+  <style>
+    :root { color-scheme: light dark; --bg:#f7f6f2; --surface:#fff; --ink:#18202a; --muted:#56616f; --line:#c8ced6; --action:#164e8a; --review:#7a4d00; --focus:#0067c5; }
+    * { box-sizing:border-box; }
+    html { font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.55; background:var(--bg); color:var(--ink); }
+    body { margin:0; }
+    a { color:var(--action); text-underline-offset:.18em; }
+    a:focus-visible, [tabindex]:focus-visible { outline:3px solid var(--focus); outline-offset:3px; }
+    .skip-link { position:fixed; top:.5rem; left:.5rem; padding:.75rem 1rem; background:var(--ink); color:var(--surface); transform:translateY(-160%); z-index:10; }
+    .skip-link:focus { transform:translateY(0); }
+    .report-header, main, footer { width:min(72rem, calc(100% - 2rem)); margin-inline:auto; }
+    .report-header { padding:3rem 0 1.5rem; }
+    .eyebrow, .finding-index { color:var(--muted); font-weight:700; letter-spacing:.06em; text-transform:uppercase; font-size:.78rem; }
+    h1 { font-size:clamp(2rem, 6vw, 3.5rem); line-height:1.08; max-width:20ch; }
+    h2 { margin-top:0; }
+    section, .finding { background:var(--surface); border:1px solid var(--line); border-radius:.75rem; padding:clamp(1rem, 3vw, 2rem); margin-block:1rem; }
+    .metadata { display:grid; grid-template-columns:repeat(auto-fit,minmax(12rem,1fr)); gap:1rem; }
+    .metadata div { border-left:.25rem solid var(--line); padding-left:.75rem; }
+    dt { color:var(--muted); font-weight:700; }
+    dd { margin:0; }
+    table { border-collapse:collapse; width:min(32rem,100%); }
+    caption { text-align:left; font-weight:700; margin-bottom:.5rem; }
+    th, td { border:1px solid var(--line); padding:.6rem .75rem; text-align:left; }
+    .status { display:inline-block; border:2px solid currentColor; border-radius:999px; padding:.15rem .6rem; font-weight:700; }
+    .status-fail { color:#8b1e2d; }
+    .status-pass { color:#205d47; }
+    .status-not-tested { color:var(--review); }
+    .criterion { margin-left:.5rem; }
+    .occurrences { padding-left:1.5rem; }
+    .occurrences > li { margin-block:1rem; padding-left:.5rem; }
+    pre { max-width:100%; overflow:auto; padding:1rem; background:#111820; color:#f4f7fa; border-radius:.5rem; }
+    img { display:block; max-width:100%; height:auto; border:1px solid var(--line); }
+    footer { padding:1rem 0 3rem; color:var(--muted); }
+    @media (prefers-color-scheme:dark) { :root { --bg:#11151a; --surface:#192028; --ink:#f4f6f8; --muted:#b8c1cc; --line:#4f5c6b; --action:#8dc3ff; --review:#ffd28a; --focus:#8dc3ff; } .status-fail { color:#ffb2bc; } .status-pass { color:#9cdfc5; } }
+    @media (prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto!important; transition-duration:.01ms!important; animation-duration:.01ms!important; } }
+    @media print { :root { --bg:#fff; --surface:#fff; --ink:#000; --muted:#333; --line:#777; --action:#000; } .skip-link { display:none; } section,.finding { break-inside:avoid; border-radius:0; } a { color:#000; } a[href]::after { content:" (" attr(href) ")"; overflow-wrap:anywhere; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to report content</a>
+  <header class="report-header">
+    <p class="eyebrow">Accessibility assessment</p>
+    <h1>Checkout accessibility review</h1>
+    <p>Example Commerce</p>
+  </header>
+  <main id="main-content" tabindex="-1">
+    <section aria-labelledby="scope-heading">
+      <h2 id="scope-heading">Scope and test environment</h2>
+      <dl class="metadata">
+        <div><dt>Scope</dt><dd>Checkout payment page and shared payment components</dd></div>
+        <div><dt>Standard</dt><dd>WCAG 2.2 AA</dd></div>
+        <div><dt>Tester</dt><dd>Kuba</dd></div>
+        <div><dt>Generated</dt><dd>July 18, 2026 at 12:30 PM</dd></div>
+      </dl>
+    </section>
+    <section aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Assessment summary</h2>
+      <p>This report contains 4 findings: 2 failed, 1 passed and 1 not tested.</p>
+      <table>
+        <caption>Finding outcomes</caption>
+        <thead><tr><th scope="col">Outcome</th><th scope="col">Findings</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Fail</th><td>2</td></tr>
+          <tr><th scope="row">Pass</th><td>1</td></tr>
+          <tr><th scope="row">Not tested</th><td>1</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section aria-labelledby="findings-heading">
+      <h2 id="findings-heading">Detailed findings</h2>
+      <article class="finding" id="finding-189e54bbc5e848f4" aria-labelledby="finding-1-heading">
+  <header>
+    <p class="finding-index">Finding 1</p>
+    <h3 id="finding-1-heading">Images must have alternate text</h3>
+    <p><span class="status status-fail">Fail</span> <span class="criterion">WCAG 1.1.1 Non-text Content</span></p>
+  </header>
+  <p>Images must have alternate text</p>
+  
+  <h4>Affected locations</h4>
+  <ol class="occurrences"><li>
+        <h5>Occurrence 1</h5>
+        <p><strong>Page:</strong> <a href="https://example.test/checkout">https://example.test/checkout</a></p>
+        <p><strong>Element:</strong> <code>#payment-provider-logo</code></p>
+        <p><strong>Notes:</strong> The payment provider logo has no text alternative.</p>
+        <pre tabindex="0" aria-label="Code for occurrence 1"><code>&lt;img id=&quot;payment-provider-logo&quot; src=&quot;provider.svg&quot;&gt;</code></pre>
+        
+      </li><li>
+        <h5>Occurrence 2</h5>
+        <p><strong>Page:</strong> <a href="https://example.test/checkout">https://example.test/checkout</a></p>
+        <p><strong>Element:</strong> <code>.accepted-card img</code></p>
+        <p><strong>Notes:</strong> The accepted-card image is announced only as its file name.</p>
+        <pre tabindex="0" aria-label="Code for occurrence 2"><code>&lt;img src=&quot;visa.svg&quot;&gt;</code></pre>
+        
+      </li></ol>
+</article>
+<article class="finding" id="finding-3d3a363d13eb77ef" aria-labelledby="finding-2-heading">
+  <header>
+    <p class="finding-index">Finding 2</p>
+    <h3 id="finding-2-heading">Form elements must have labels</h3>
+    <p><span class="status status-fail">Fail</span> <span class="criterion">WCAG 1.3.1 Info and Relationships</span></p>
+  </header>
+  <p>Form elements must have labels</p>
+  
+  <h4>Affected locations</h4>
+  <ol class="occurrences"><li>
+        <h5>Occurrence 1</h5>
+        <p><strong>Page:</strong> <a href="https://example.test/checkout">https://example.test/checkout</a></p>
+        <p><strong>Element:</strong> <code>#card-security-code</code></p>
+        <p><strong>Notes:</strong> The visible Security code label is not associated with the input.</p>
+        <pre tabindex="0" aria-label="Code for occurrence 1"><code>&lt;input id=&quot;card-security-code&quot; inputmode=&quot;numeric&quot;&gt;</code></pre>
+        
+      </li></ol>
+</article>
+<article class="finding" id="finding-cc430acde69c3d0f" aria-labelledby="finding-3-heading">
+  <header>
+    <p class="finding-index">Finding 3</p>
+    <h3 id="finding-3-heading">All interactive elements must be operable with a keyboard</h3>
+    <p><span class="status status-not-tested">Not tested</span> <span class="criterion">WCAG 2.1.1 Keyboard</span></p>
+  </header>
+  <p>All interactive elements must be operable with a keyboard</p>
+  
+  <h4>Affected locations</h4>
+  <ol class="occurrences"><li>
+        <h5>Occurrence 1</h5>
+        <p><strong>Page:</strong> <a href="https://example.test/checkout">https://example.test/checkout</a></p>
+        
+        
+        
+        
+      </li></ol>
+</article>
+<article class="finding" id="finding-fa84072935af4f09" aria-labelledby="finding-4-heading">
+  <header>
+    <p class="finding-index">Finding 4</p>
+    <h3 id="finding-4-heading">A mechanism must bypass repeated blocks of content</h3>
+    <p><span class="status status-pass">Pass</span> <span class="criterion">WCAG 2.4.1 Bypass Blocks</span></p>
+  </header>
+  <p>A mechanism must bypass repeated blocks of content</p>
+  
+  <h4>Affected locations</h4>
+  <ol class="occurrences"><li>
+        <h5>Occurrence 1</h5>
+        <p><strong>Page:</strong> <a href="https://example.test/checkout">https://example.test/checkout</a></p>
+        
+        
+        
+        
+      </li></ol>
+</article>
+    </section>
+    <section aria-labelledby="limitations-heading">
+      <h2 id="limitations-heading">Limitations</h2>
+      <p>This report records the tests and evidence supplied by the auditor. It does not certify legal compliance, and no automated tool finds every accessibility issue.</p>
+    </section>
+  </main>
+  <footer><p>Generated locally by Evidence Studio.</p></footer>
+</body>
+</html>

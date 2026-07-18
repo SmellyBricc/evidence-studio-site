@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11120f" />
+    <meta
+      name="description"
+      content="Evidence Studio connects accessibility findings, screenshots, retests, and client-ready reports in one local-first Chrome workflow."
+    />
+    <meta property="og:title" content="Evidence Studio | Accessibility evidence that holds together" />
+    <meta
+      property="og:description"
+      content="Capture context, protect sensitive evidence, and turn retests into client-ready proof."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/campaign-still.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Evidence Studio | Accessibility evidence that holds together</title>
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <link rel="preload" as="image" type="image/avif" href="./assets/campaign-still.avif" fetchpriority="high" />
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("evidence-studio-theme");
+          const preferred = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          document.documentElement.dataset.theme = stored || preferred;
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Evidence Studio",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Chrome",
+        "description": "A local-first workspace for organizing accessibility findings, evidence, retests, and reports."
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Evidence Studio needs JavaScript for its interactive product sample. The rest of the product information remains available in the page source.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
