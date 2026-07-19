@@ -25,8 +25,15 @@
       as="image"
       type="image/avif"
       href="./assets/campaign-still-1200.avif"
-      imagesrcset="./assets/campaign-still-768.avif 768w, ./assets/campaign-still-1200.avif 1200w, ./assets/campaign-still.avif 1536w"
-      imagesizes="(max-width: 900px) calc(100vw - 20px), 48vw"
+      media="(min-width: 901px)"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      href="./assets/campaign-still-768.avif"
+      media="(max-width: 900px)"
       fetchpriority="high"
     />
     <script>
