@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11120f" />
+    <meta
+      name="description"
+      content="Review the Evidence Studio accessibility reporting workflow and share direct product and pricing feedback."
+    />
+    <link rel="canonical" href="https://smellybricc.github.io/evidence-studio-site/review.html" />
+    <meta property="og:title" content="Specialist review | Evidence Studio" />
+    <meta
+      property="og:description"
+      content="Six practical questions about accessibility reporting, workflow pain, and realistic pricing."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://smellybricc.github.io/evidence-studio-site/review.html" />
+    <meta property="og:image" content="https://smellybricc.github.io/evidence-studio-site/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>Specialist review | Evidence Studio</title>
+    <link rel="icon" type="image/png" href="./assets/icon.png" />
+    <link
+      rel="preload"
+      as="image"
+      type="image/avif"
+      href="./assets/campaign-still-1200.avif"
+      imagesrcset="./assets/campaign-still-768.avif 768w, ./assets/campaign-still-1200.avif 1200w, ./assets/campaign-still.avif 1536w"
+      imagesizes="(max-width: 900px) calc(100vw - 20px), 48vw"
+      fetchpriority="high"
+    />
+    <script>
+      (() => {
+        try {
+          const stored = localStorage.getItem("evidence-studio-theme");
+          const preferred = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+          document.documentElement.dataset.theme = stored || preferred;
+        } catch {
+          document.documentElement.dataset.theme = "dark";
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>The guided specialist review needs JavaScript. You can still contact Evidence Studio from the main website.</noscript>
+    <script type="module" src="/src/review.tsx"></script>
+  </body>
+</html>

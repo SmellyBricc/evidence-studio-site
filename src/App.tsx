@@ -1,7 +1,7 @@
 import { PremiumDemo } from "./components/PremiumDemo";
 import { Reveal } from "./components/Reveal";
 import { ThemeToggle } from "./components/ThemeToggle";
-import { checkoutHref, checkoutIsLive, specialistReviewHref } from "./lib/site";
+import { checkoutHref, checkoutIsLive, contactHref } from "./lib/site";
 
 const workflowWords = ["Capture context", "Connect results", "Protect evidence", "Retest", "Report"];
 
@@ -231,7 +231,7 @@ export default function App() {
                   {checkoutIsLive ? "Get founding licence" : "Join specialist review"}
                 </a>
                 {!checkoutIsLive ? (
-                  <p className="cta-note">No payment is taken yet. Your email opens with a short review template.</p>
+                  <p className="cta-note">Answer six questions. Nothing is sent until you choose to open an email.</p>
                 ) : null}
               </div>
             </div>
@@ -275,7 +275,7 @@ export default function App() {
           </a>
           <p>Accessibility evidence that holds together.</p>
           <div className="footer-links">
-            <a href={specialistReviewHref}>Contact</a>
+            <a href={contactHref}>Contact</a>
             <a href="./privacy.html">Privacy</a>
             <a href="./terms.html">Terms</a>
             <a href="./sample-accessibility-report.html">Static sample report</a>

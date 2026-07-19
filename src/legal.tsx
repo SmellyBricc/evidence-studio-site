@@ -3,7 +3,7 @@ import "@fontsource-variable/manrope/wght.css";
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { ThemeToggle } from "./components/ThemeToggle";
-import { specialistReviewHref } from "./lib/site";
+import { contactHref } from "./lib/site";
 import "./styles.css";
 
 type LegalPage = "privacy" | "terms";
@@ -34,7 +34,7 @@ function LegalFooter() {
           <span>Evidence Studio</span>
         </a>
         <div className="footer-links">
-          <a href={specialistReviewHref}>Contact</a>
+          <a href={contactHref}>Contact</a>
           <a href="./privacy.html">Privacy</a>
           <a href="./terms.html">Terms</a>
         </div>
@@ -56,7 +56,7 @@ function PrivacyPage() {
         <section>
           <h2>The website</h2>
           <p>This website build contains no analytics scripts, advertising trackers, or marketing cookies.</p>
-          <p>If you choose the specialist review link, your email app opens. Your message is handled by your email provider and the recipient’s email provider.</p>
+          <p>The guided specialist review keeps answers on the page until you prepare an email. The website does not transmit or store those answers. Your email provider handles the message after you choose to open your email app.</p>
         </section>
 
         <section>
@@ -78,7 +78,7 @@ function PrivacyPage() {
 
         <section>
           <h2>Contact</h2>
-          <p>Questions about this privacy notice can be sent through the <a href={specialistReviewHref}>Evidence Studio contact email</a>.</p>
+          <p>Questions about this privacy notice can be sent through the <a href={contactHref}>Evidence Studio contact email</a>.</p>
         </section>
       </div>
     </article>
@@ -123,7 +123,7 @@ function TermsPage() {
 
         <section>
           <h2>Contact</h2>
-          <p>Questions about the planned licence can be sent through the <a href={specialistReviewHref}>Evidence Studio contact email</a>.</p>
+          <p>Questions about the planned licence can be sent through the <a href={contactHref}>Evidence Studio contact email</a>.</p>
         </section>
       </div>
     </article>

@@ -7,6 +7,8 @@ Production marketing site and interactive premium product sample for Evidence St
 - Responsive landing page with light and dark themes
 - Interactive evidence workflow with three sample findings
 - Live report preview and downloadable standalone HTML report
+- Guided six-question specialist review with a live answer brief
+- Structured email handoff that sends nothing without the reviewer’s choice
 - Plain-language founding offer, privacy page, and pre-launch terms
 - Local self-hosted fonts and optimized AVIF and WebP product media
 - GitHub Pages deployment workflow
@@ -39,7 +41,7 @@ VITE_REVIEW_EMAIL=kuba.opoczka@gmail.com
 VITE_CHECKOUT_URL=
 ```
 
-Leave `VITE_CHECKOUT_URL` empty during specialist review. The main commercial action opens the review email. Add the Lemon Squeezy checkout URL only after the paid validation gate passes.
+Leave `VITE_CHECKOUT_URL` empty during specialist review. The main commercial action opens the guided review page. A completed review can be copied or opened in the reviewer’s email app, but the website does not transmit or store the answers. Add the Lemon Squeezy checkout URL only after the paid validation gate passes.
 
 ## Deployment
 
